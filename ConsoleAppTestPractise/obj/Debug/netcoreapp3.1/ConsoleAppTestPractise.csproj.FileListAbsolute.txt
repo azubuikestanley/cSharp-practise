@@ -1,0 +1,11 @@
+C:\Users\Ikechukwu\ProjectCSharp\ConsoleAppTestPractise\ConsoleAppTestPractise\bin\Debug\netcoreapp3.1\ConsoleAppTestPractise.exe
+C:\Users\Ikechukwu\ProjectCSharp\ConsoleAppTestPractise\ConsoleAppTestPractise\bin\Debug\netcoreapp3.1\ConsoleAppTestPractise.deps.json
+C:\Users\Ikechukwu\ProjectCSharp\ConsoleAppTestPractise\ConsoleAppTestPractise\bin\Debug\netcoreapp3.1\ConsoleAppTestPractise.runtimeconfig.json
+C:\Users\Ikechukwu\ProjectCSharp\ConsoleAppTestPractise\ConsoleAppTestPractise\bin\Debug\netcoreapp3.1\ConsoleAppTestPractise.runtimeconfig.dev.json
+C:\Users\Ikechukwu\ProjectCSharp\ConsoleAppTestPractise\ConsoleAppTestPractise\bin\Debug\netcoreapp3.1\ConsoleAppTestPractise.dll
+C:\Users\Ikechukwu\ProjectCSharp\ConsoleAppTestPractise\ConsoleAppTestPractise\bin\Debug\netcoreapp3.1\ConsoleAppTestPractise.pdb
+C:\Users\Ikechukwu\ProjectCSharp\ConsoleAppTestPractise\ConsoleAppTestPractise\obj\Debug\netcoreapp3.1\ConsoleAppTestPractise.csprojAssemblyReference.cache
+C:\Users\Ikechukwu\ProjectCSharp\ConsoleAppTestPractise\ConsoleAppTestPractise\obj\Debug\netcoreapp3.1\ConsoleAppTestPractise.AssemblyInfoInputs.cache
+C:\Users\Ikechukwu\ProjectCSharp\ConsoleAppTestPractise\ConsoleAppTestPractise\obj\Debug\netcoreapp3.1\ConsoleAppTestPractise.AssemblyInfo.cs
+C:\Users\Ikechukwu\ProjectCSharp\ConsoleAppTestPractise\ConsoleAppTestPractise\obj\Debug\netcoreapp3.1\ConsoleAppTestPractise.dll
+C:\Users\Ikechukwu\ProjectCSharp\ConsoleAppTestPractise\ConsoleAppTestPractise\obj\Debug\netcoreapp3.1\ConsoleAppTestPractise.pdb
