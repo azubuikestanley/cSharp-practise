@@ -82,6 +82,46 @@ namespace ConsoleAppTestPractise
                 }
             }
 
+            //the if-else if Statement
+            //if statement can have zero or more else if and itmust come before the last else which is optional
+            int k = 44;
+            if(k == 7)
+            {
+                Console.WriteLine("Value of k is 7");
+            }
+            else if (k == 19)
+            {
+                Console.WriteLine("Value of k is 19");
+            }
+            else if (k == 44)
+            {
+                Console.WriteLine("Value of k is 44");
+            }
+            else
+            {
+                Console.WriteLine("No match");
+            }
+
+
+            //The Switch Statement
+            int num = 4;
+            switch (num)
+            {
+                case 1:
+                    Console.WriteLine("one");
+                    break;
+                case 2:
+                    Console.WriteLine("two");
+                    break;
+                case 3:
+                    Console.WriteLine("three");
+                    break;
+                case 4:
+                    Console.WriteLine("four");
+                    break;
+
+            }
+
 
 
         }
