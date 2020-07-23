@@ -119,8 +119,15 @@ namespace ConsoleAppTestPractise
                 case 4:
                     Console.WriteLine("four");
                     break;
-
+                default:
+                    Console.WriteLine("This is the default age");
+                    break;
             }
+            //default code executes when none of the case matches the switch expression
+            //the break statement is use to terminate the switch statement
+
+
+            //The while loop
 
 
 
