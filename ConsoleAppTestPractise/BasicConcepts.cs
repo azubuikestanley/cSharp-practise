@@ -2,7 +2,7 @@
 
 namespace ConsoleAppTestPractise
 {
-    class Program
+    class BasicConcepts
     {
         static void Main(string[] args)
         {   
