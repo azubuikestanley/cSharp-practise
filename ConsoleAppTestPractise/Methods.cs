@@ -54,8 +54,42 @@ namespace ConsoleAppTestPractise
             {
                 return h * w;
             }
-            int ress = Areas(w: 5, h: 4);
+            int ress = Areas(w: 5, h: 4); //output is 20
             Console.WriteLine(ress);
+
+            /*Passing Arguments - There are three ways to pass arguments to a method when the method is called
+             * by value
+             * by reference
+             * and as output
+             */
+                 //- by value copies the argument's value into the method's formal parameter, here we cam make changes to the parameter
+                 //within the method without having any effect on the argument
+                 //Note that C# uses call by value to pass arguments
+                 //Check example below
+                static void sqR(int x)
+                {
+                    x = x * x;
+                    Console.WriteLine(x); //this return the square of x
+                }
+                int ai = 4;
+                sqR(ai);
+                Console.WriteLine(ai); // this returns the value of ai
+
+                //-Passing by Reference - this copies an argument's memory address into the formal parameter. inside the method, the
+                                        //address is used in the call, this means that changes made to the parameter affect the argument.
+                                        //To pass the value by reference, the ref keyword is used in both the call and the method definition
+                static void SqrR(ref int xj)
+                {
+                    xj = xj * xj;
+                }
+                int bi = 3;
+                SqrR(ref bi);
+                Console.WriteLine(bi);
+
+
+
+
+
         }
 
     }
