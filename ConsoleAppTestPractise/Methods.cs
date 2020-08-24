@@ -30,6 +30,11 @@ namespace ConsoleAppTestPractise
         {
             Console.WriteLine("Value: double " + aj);
         }
+        static void Printi(string label, double aj)
+        {
+            Console.WriteLine(label + aj);
+        }
+
 
         static void Main(string[] args)
         {
@@ -125,6 +130,13 @@ namespace ConsoleAppTestPractise
              */
             Printi(22);
             Printi(20.45);
+            /*
+             * when overloading methods, the definitions of the methods must differ from each other by the types and/or number of parameter
+             * when there are overloaded methods, the methods called is based on the arguments. An integer argument will call the method
+             * implementation that accepts an integer parameter, A double argument will call the implementation that accepts a double parameter.
+             * Multiple arguments will call the implementation that accepts the same number of arguments.
+            */
+            Printi("Average: ", 7.57); //multiple argument overload
 
 
 
