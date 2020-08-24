@@ -293,6 +293,8 @@ namespace ConsoleAppTestPractise
             //the do while block above will run infinitely even if the user enters 'exit' as input, so we refactor with below code
             do
             {
+                Console.WriteLine("Type exit to stop loop of xi");
+
                 Console.Write("xi = ");
                 string str = Console.ReadLine();
                 if (str == "exit" || str == "")
