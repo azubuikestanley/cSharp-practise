@@ -17,6 +17,20 @@ namespace ConsoleAppTestPractise
         {
             Console.WriteLine(j);
         }
+
+
+        //check line 123 for method overload explanation here
+        static void Printi(int aj)
+        {
+            Console.WriteLine("Value: int" + aj);
+        }
+        //+ operator is used to concatenate values in this case. this method accepts an integer argument only. Overloading it will
+        //make it available for other types, such as double
+        static void Printi(double aj)
+        {
+            Console.WriteLine("Value: double " + aj);
+        }
+
         static void Main(string[] args)
         {
             sayHi();
@@ -62,10 +76,11 @@ namespace ConsoleAppTestPractise
              * by reference
              * and as output
              */
-                 //- by value copies the argument's value into the method's formal parameter, here we cam make changes to the parameter
-                 //within the method without having any effect on the argument
-                 //Note that C# uses call by value to pass arguments
-                 //Check example below
+                 /*- by value copies the argument's value into the method's formal parameter, here we cam make changes to the parameter
+                   within the method without having any effect on the argument
+                   Note that C# uses call by value to pass arguments
+                   Check example below
+                 */
                 static void sqR(int x)
                 {
                     x = x * x;
@@ -75,17 +90,41 @@ namespace ConsoleAppTestPractise
                 sqR(ai);
                 Console.WriteLine(ai); // this returns the value of ai
 
-                //-Passing by Reference - this copies an argument's memory address into the formal parameter. inside the method, the
-                                        //address is used in the call, this means that changes made to the parameter affect the argument.
-                                        //To pass the value by reference, the ref keyword is used in both the call and the method definition
+                /*-Passing by Reference - this copies an argument's memory address into the formal parameter. inside the method, the
+                                          address is used in the call, this means that changes made to the parameter affect the argument.
+                                          To pass the value by reference, the ref keyword is used in both the call and the method definition
+                                        */
                 static void SqrR(ref int xj)
                 {
                     xj = xj * xj;
                 }
                 int bi = 3;
                 SqrR(ref bi);
-                Console.WriteLine(bi);
+                Console.WriteLine(bi); // output is 9; the ref keyword passess the memory address to the method parameter, which allows the 
+                                       // method to operate on the actual variable
 
+                /*-Passing by Output - Output parameters are similar to reference parameters, except that they transfer data out of the method
+                                       rather than accept data in. they are defined using the out keyword.
+                                       The variable supplied for the output parameter need not be initialized since that value will not be used. 
+                                       Output parameters are particularly useful when you need to return multiple values from a method
+                                    */
+                static void GetValues(out int j, out int k)
+                {
+                    j = 5;
+                    k = 42;
+                }
+                int d, e;
+                GetValues(out d, out e); // now d equals 5 , e equals 42. 
+                                         //Note that output parameters get their value from the method 
+                                         //the out keyword is used both when defining the method and when calling it
+
+            /*
+             * Method Overloading
+             * iswhen multiple methods have the same name but different parameters.
+             * check line 22 for the example on method overload
+             */
+            Printi(22);
+            Printi(20.45);
 
 
 
