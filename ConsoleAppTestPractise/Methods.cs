@@ -137,8 +137,48 @@ namespace ConsoleAppTestPractise
              * Multiple arguments will call the implementation that accepts the same number of arguments.
             */
             Printi("Average: ", 7.57); //multiple argument overload
+            /*
+             * Note that you cannot overload method declarations that differ only by return type. the following declaration results in an error
+             * int PrintName(int a) {}
+             * float PrintName(int a) {}
+             * double PrintName(int a) {}
+             */
 
 
+            //Recursion - recursive method is a method that calls itself. this is a classical way of solving factorial of a number
+            static int Fact(int num)
+            {
+                if (num == 1)
+                {
+                    return 1;
+                }
+                return num * Fact(num - 1);
+            }
+
+            Console.WriteLine(Fact(5));
+
+
+            /*
+             * Making a Pyramid
+             * let create a method that will display a pyramid of any height in the console window  using star(*) symbols
+             */
+              static void DrawPyramid(int n)
+            {
+                for (int i = 1; i <= n; i++)
+                {
+                    for (int j = 1; j <= n; j++)
+                    {
+                        Console.WriteLine(" ");
+                    }
+                    for (int k = 1; k <= 2* i - 1; k++)
+                    {
+                        Console.WriteLine("*" + " ");
+                    }
+                    Console.WriteLine();
+                }
+            }
+
+            DrawPyramid(5);
 
 
         }
