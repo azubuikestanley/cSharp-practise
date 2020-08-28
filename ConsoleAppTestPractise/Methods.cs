@@ -180,7 +180,17 @@ namespace ConsoleAppTestPractise
 
             DrawPyramid(5);
 
+            //calling public member in ClassObject.cs file
+            ClassObject person1 = new ClassObject();
+                person1.SayHI();
 
+            //calling public member in ClassObject.cs file 
+            ClassObject bob = new ClassObject();
+            bob.name = "Bobby";
+            bob.age = 3;
+
+            Console.WriteLine(bob.name);
+            Console.WriteLine(bob.age);
         }
 
     }
