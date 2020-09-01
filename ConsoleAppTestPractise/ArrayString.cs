@@ -162,12 +162,8 @@ namespace ConsoleAppTestPractise
             string test = "This is some test about a dog. the word dog appears in the text a number of times. this is the end.";
 
             test = test.Replace("dog", "cat");
-            test = test.Substring(0, test.IndexOf("."));
+            test = test.Substring(0, test.IndexOf(".") + 1);
             Console.WriteLine(test);//output - This is some test about a cat.
-
-
-
-
 
 
         }
