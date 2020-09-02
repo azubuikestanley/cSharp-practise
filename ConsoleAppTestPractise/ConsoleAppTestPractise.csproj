@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <StartupObject>ConsoleAppTestPractise.MoreClasses</StartupObject>
+    <StartupObject>ConsoleAppTestPractise.ClassObject</StartupObject>
     <ApplicationIcon />
     <Win32Resource />
   </PropertyGroup>
