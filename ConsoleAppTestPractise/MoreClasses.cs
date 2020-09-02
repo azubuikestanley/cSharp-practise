@@ -197,13 +197,11 @@ namespace ConsoleAppTestPractise
              * DateTime class - DateTime.Now, DateTime.Today, DateTime.DaysInMonth(2016, 2)
              */
             int[] testArr = { 3, 2, 5, 6, 1, 4 };
-            Array.Reverse(testArr);
-            Console.WriteLine(testArr);
+            Array.Reverse(testArr); 
             Array.Sort(testArr);
-            Console.WriteLine(testArr);
 
             string st1 = "some string";
-            string st2 = "another string";
+            string st2 = " another string";
             Console.WriteLine(String.Concat(st1, st2)); //combines the two string
             Console.WriteLine(String.Equals(st1, st2)); //returns false as its not equal
 
@@ -290,7 +288,10 @@ namespace ConsoleAppTestPractise
             Box b2 = new Box(5, 7);
             Box b3 = b1 + b2;
             Console.WriteLine(b3.Height); //output 19
-            Console.WriteLine(b3.Width);  //output 11
+            Console.WriteLine(b3.Width);  //output 10
+            //All arithmetic and comparison operators can be overloaded. For instance, you could define greater than and less than operators for the boxes
+            //that would compare the Boxes and return a boolean result. Just keep in mind that when overloading the greater than operator, the less than 
+            //operator should also be defined
 
 
         }
