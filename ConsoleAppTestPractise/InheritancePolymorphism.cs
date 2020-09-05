@@ -130,6 +130,35 @@ namespace ConsoleAppTestPractise
         }
 
 
+        //Interface
+        public interface IShape
+        {
+             void Draw();
+        }
+        class CircleA : IShape
+        {
+            public void Draw()
+            {
+                Console.WriteLine("Circle Draw");
+            }
+        }
+
+
+        //Nested class
+        class Car
+        {
+             string name;
+             public Car(string nm)
+             {
+                 name = nm;
+                 Motor m = new Motor();
+             }
+             public class Motor
+             {
+                 // some code
+             }
+        }
+
 
         static void main(string[] args)
          {
@@ -245,11 +274,87 @@ namespace ConsoleAppTestPractise
 
 
 
-             /* Interfaces
-              * 
-              * 
-              */
+            /* Interfaces - 
+             * An interface is a completely abstract class, which contains only abstract members. It is declared using the interface keyword,
+             * Example -
+             * public interface IShape
+             * {
+             *     void Draw();
+             * }
+             * All members of the interface are by default abstract, so no need to use the abstract keyword.
+             * Also all members of an interface are always public, an no access modifiers can be applied to them.
+             * It is common to use the capital letter I as the starting letter for an interface name.
+             * Interfaces can contain properties, methods, etc but cannot contain fields (variables).
+             * 
+             * When a class implements an interface, it must also implement, or define, all of its methods.
+             * The term implementing an interface is used(opposed to the term "inheriting from") to describe the process of creating a class based on an
+             * interface. The interface simply describes what a class should do. The class implementing the interface must define how to accomplish the behaviours.
+             * The syntax to implement an interface is the same as that to derive a class.
+             * example line (134)
+             */
+            IShape ca = new CircleA();
+            ca.Draw();  //Output "Circle Draw"
+            /*Note that the override keyword is not needed when you implement an interface
+             * Why use interfaces rather than abstract classes?
+             * A class can inherit from just one base class, but it can implement multiple interfaces!
+             * Therefore, by using interfaces we can include behaviour from multiple sources in a class.
+             * To implement multiple interfaces, use a comma separated list of interfaces when creating the class: Class A : IShape, IAnimal, etc
+             */
 
+
+
+            /*
+             * Nested Classes
+             * C# supports nested classes, a nested class is a class that is a member of another class. example below & line (148)
+             * class Car {
+             *      string name;
+             *      public Car(string nm) {
+             *          name = nm;
+             *          Motor m = new Motor();
+             *      }
+             *      public class Motor {
+             *          // some code
+             *      }
+             * }
+             * 
+             * The Motor class is nested in the Car class and can be used similar to other members of the class.
+             * A nested class acts as a member of the class, so it can have the same access modifiers as other members(public, private, protected).
+             * 
+             * Just as in real life, objects can contain other objects. For example, a car, which has its own attributes(color, brand, etc) contains
+             * a motor, which as a separate object, has its own attributes(volume, horsepower, etc).
+             * Here, the Car class can have a nested Motor class as one of its members
+             */
+
+
+
+
+            /*Namespaces
+             * when we create a blank project, it has the following structure:
+             * 
+             * using System;
+             * using System.Collections.Generic;
+             * using System.Linq;
+             * using.System.Text;
+             * using System.Threading.Tasks;
+             * 
+             * namespace SoloLearn {
+             *    class Program {
+             *        static void Main(string[] args) {
+             *        }
+             *    }
+             * }
+             * 
+             * Note that our whole program is inside a namespace. So, what are namespaces?
+             * Namespaces declare a scope that contains a set of related objects. You can use a namespace to organize code elements. 
+             * You can define your own namespaces and use them in your program. The using keyword states that the rpogram is using a given namespace.
+             * for example, we are using the System namespace in our programs, which is where the class Console is defined. Without the using
+             * statement, we would have to specify the namespace whereever it is used like below
+             * System.Console.WriteLine("Hello world");
+             * 
+             * The .NET framework uses namespaces to organize its many classes. System is one example of a .NET framework namespaces. Declaring your
+             * own namespaces can help you group your class and method names in larger programming projects
+             * 
+             */
 
 
 
