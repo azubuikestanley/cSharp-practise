@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace ConsoleAppTestPractise
 {
@@ -122,7 +123,7 @@ namespace ConsoleAppTestPractise
                 int[] arr = { 3, 5, 7 };
                 Console.WriteLine(arr[8]);
              }
-             catch(Exception e)
+             catch(Exception)
              {
                 Console.WriteLine("An error occurred");
              }
@@ -141,6 +142,107 @@ namespace ConsoleAppTestPractise
             {
                 Console.WriteLine(e.Message); //Output - Index was outside the bounds of the array
             }
+            /*We can also catch and handle different exceptions separately,
+             * 
+             * Handling Multiple Exceptions
+             * A single try block can contain mutliple catch blocks that handle different exceptions separately.
+             * Exception handling is particularly useful when dealing with user input
+             * For example, for a program that requests user input of two numbers and then outputs their quotient, be sure that you handle division
+             * by zero, in case your user enters 0 as the second number.
+             * example below
+             */
+            int i, j;
+            try
+            {
+                i = Convert.ToInt32(Console.Read());
+                j = Convert.ToInt32(Console.Read());
+                Console.WriteLine(i / j);
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Cannot divide by 0");
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("An error occurred");
+                Console.WriteLine(e.Message); //show the error message
+            }
+            /*The above code handles the DivideByZeroException separately. The last catch handles all the other exceptions that might occur. 
+             * If multiple exceptions are handled, the Exception type must be defined last.
+             * Now if the user enters 0 for the second number, "Cannot divide by 0" will be displayed. if for example the user enters non-integer values, 
+             * "An error occurred" will be displayed
+             * 
+             * The following exception types are some of the most commonly used:
+             * - FileNotFoundException
+             * - FormatException
+             * - IndexOutOfRangeException
+             * - InvalidOperationException
+             * - OutOfMemoryException
+             * 
+             * 
+             * finally
+             * An optional finally block can be used after the catch blocks. The finally block is used to execute a given set of statements, whether an 
+             * exception is thrown or not.
+             * see example below
+             */
+            int result = 0;
+            int num1 = 10;
+            int num2 = 5;
+            try
+            {
+                result = num1 / num2;
+            }
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine("Error - Cannot divide by 0");
+            }
+            finally
+            {
+                Console.WriteLine(result);
+            }
+            /*The finally block can be used, for example, when you work with files or other resources. These should be closed or released 
+             * in the finally block, whether an exception is raised or not
+             */
+
+
+
+            /*Working with files
+             * - Writing to Files
+             * The System.IO namespace has various classes that are used for performing numerous operations with files, such as creating and deleting
+             * files, reading from or writing to a file, closing a file and more. The File class is one of them. For example
+             * 
+             * string str = "Some text";
+             * File.WriteAllText("test.txt", str);
+             * 
+             * The WriteAllText() method creates a file with the specified path and writes the content to it.
+             * If the file already exists, it is overwritten.
+             * The code above creates a file test.txt and writes the contents of the str string into it.
+             * Note that to use the file class, we need to use the System.IO namespace: using System.IO;
+             * 
+             * 
+             * - Reading from files
+             * You can read the content of a file using the ReadAllText method of the File class: example below
+             */
+             string str = "Some text";
+             File.WriteAllText("testIU.txt", str);
+
+            string txt = File.ReadAllText("testIU.txt");
+            Console.WriteLine(txt);
+            /*This will output the content of the test.txt file.
+             * The following methods are available in the file class:
+             * AppenAllText() - appends text to the end of the file
+             * Create() - creates a file in the specified location.
+             * Delete() - deletes the specified file
+             * Exists() - determines whether the specified file exists
+             * Copy() - copies a file to a new location
+             * 
+             * All methods automatically close the file after performing the operation
+             */
+
+
+
+
+
 
 
         }
