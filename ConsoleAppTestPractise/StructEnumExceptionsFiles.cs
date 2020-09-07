@@ -29,6 +29,11 @@ namespace ConsoleAppTestPractise
         }
 
 
+        //Enum
+        enum Days { Sun, Mon, Tue, Wed, Thu, Fri, Sat};
+
+        enum TrafficLights { Green, Red, Yellow };
+
         static void Main(string[] args)
         {
             /*Struct
@@ -58,9 +63,46 @@ namespace ConsoleAppTestPractise
 
 
             /*Enums
+             * The enum keyword is used to declare an enumeration: A type that consists of a set of named constants called the enumerator list. By
+             * default, the first enumerator has the value 0, and the value of each successive enumerator is increased by 1.
+             * For example, in the following enumeration, Sun is 0, Mon is 1, Tue is 2, and so on
+             * enum Days {Sun, Mon, Tue, Wed, Thu, Fri, Sat};
+             * you can also assign your own enumerator values as below
+             * enum Days {Sun, Mon, Tue=4, Wed, Thu, Fri, Sat};
+             * In the example above, the enumeration will start from 0, then Mon is 1, Tue is 4, Wed is 5 and so on.
+             * The value of the next item in an Enum is one increment of the previous value. Note that the values are comma separated. You can refer to 
+             * the values in the Enum with the dot syntax.
+             * In order to assign Enum values to int variables, you have to specify the type in parentheses
+             * see example line(33)
+             */
+            int x = (int)Days.Wed;
+            Console.WriteLine(x); //output 3
+            /*Basically, Enums define varibales that represent members of a fixed set. Some sample Enum uses include month names, days of the week,
+             * cards in a deck etc
+             * 
+             * Enums are often used with switch statements.
+             * see example line (35)
+             */
+            TrafficLights tl = TrafficLights.Red;
+            switch (tl)
+            {
+                case TrafficLights.Green:
+                    Console.WriteLine("Go!!!");
+                    break;
+                case TrafficLights.Red:
+                    Console.WriteLine("Stop!!!");
+                    break;
+                case TrafficLights.Yellow:
+                    Console.WriteLine("Caution!!!");
+                    break;
+            }
+
+
+            /*
              * 
              * 
              */
+
 
 
         }
