@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ConsoleAppTestPractise
 {
@@ -126,6 +129,50 @@ namespace ConsoleAppTestPractise
              * - Clear() : Removes all the key/value pairs from the dictionary
              * - ContainsKey(K key) - Returns true if the specified key is present in the dictionary
              * - ContainsValue(V value) - Returns true if the specified value is present in the dictionary
+             * 
+             */
+
+            /*HashSet<T>
+             * A hash set is a set of unique values where duplicates are not allowed
+             * C# includes the HashSet<T> class in the generic collections namespace. All HashSet<T> elements are required to be of the same type T.
+             * Hash sets are different from other collections because they are simply a set of values. They do not have index positions and elements cannot be ordered
+             * 
+             * The HashSet<T> class provides high performance set operations. HashSets allow fast lookup, addition and removal of items and can be used to implement
+             * either dynamic sets of items or lookup tables that allow finding and item by its key (e.g, finding the phone number of a person by the last name)
+             * 
+             * HashSet<T> properties include:
+             * - Count : Returns the number of values in the hash set
+             * 
+             * HashSet<T> methods includes:
+             * - Add(T t) : Adds a value(t) to the hash set
+             * - IsSubsetOf(ICollection c) : returns true if the hash set is a subset of the specified collection(c)
+             * 
+             * Lets look at an example of HashSet<T> below:
+             */
+            HashSet<int> hs = new HashSet<int>();
+            hs.Add(5);
+            hs.Add(10);
+            hs.Add(15);
+            hs.Add(20);
+            Console.Write("\nHashSet: ");
+            foreach (int i in hs)
+                Console.Write(i + " "); // 5 10 15 20  *element may be in any order
+            Console.Write("\nCount: " + hs.Count);  //4
+
+            HashSet<int> hs2 = new HashSet<int>();
+            hs2.Add(15);
+            hs2.Add(20);
+            Console.Write("\n{15, 20} is a subset of {5, 10, 15, 20}:" + hs2.IsSubsetOf(hs));  //True
+
+            /*Here are additional HashSet<T> methods:
+             * - Remove(T t) : Removes the value (t) from the hash set.
+             * - Clear() : Removes all the elements from the hash set.
+             * - Contains(T t) : Returns true when a value (t) is present in the hash set
+             * - ToString() : Creates a string from the hash set.
+             * - IsSupersetOf(ICollection c) : Returns true if the hash set is a superset of the specified collection
+             * - UnionWith(ICollection c) : Applies set union operation on the hash set and the specified collections (c)
+             * - IntersectWith(ICollection c) : Applies set intersection operation on the hash set and the specified collection (c).
+             * - ExceptWith(ICollection c) : Applies set difference operation on the hash set and the specified collection (c)
              * 
              */
 
