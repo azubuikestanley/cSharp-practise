@@ -290,18 +290,8 @@ namespace ConsoleAppTestPractise
 
             PrintBar("ba1 AND ba2", ba1.And(ba2));
             PrintBar(" Not ba2", ba2.Not());
-            /*one use case of BitArrays is in image processing to store the individual bits of a gray-scale image
-             * 
-             */
-
-
-
-
-
-
-
-
-
+            //one use case of BitArrays is in image processing to store the individual bits of a gray-scale image
+             
 
 
 
