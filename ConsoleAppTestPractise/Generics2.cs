@@ -78,6 +78,57 @@ namespace ConsoleAppTestPractise
             foreach (int i in q)
                 Console.Write(i + " ");  // 10 15
             Console.Write("\nCount: " + q.Count); //2
+            /*Below are additional Queue<T> methods:
+             * - Clear() : Removes all objects from the queue.
+             * - Contains(T t) : Returns true when the element t is present in the queue.
+             * - Peek() : Returns the object at the beginning of the queue without removing it.
+             * - ToArray() : Copies the queue into a new array
+             * 
+             */
+
+
+
+            /*Dictionary and HashSet
+             * Dictionary<U,V>
+             * A dictionary is a collection of unique key/value pairs where a key is used to access the corresponding value. Dictionaries are used in 
+             * database indexing, cache implementations, and so on.
+             * The C# generic collection Dictionary<K,V> class requires all key/value pairs be of the same type K,V. 
+             * Duplicate keys are not permitted to ensure that every key/value pair is unique.
+             * 
+             * Dictionary<K,V> properties include:
+             * - Count : Gets the number of key/value pairs contained in the dictionary
+             * - Item[K key] : Gets the value associated with the specified key in the dictionary. Item is the indexer and is not required when accessing an 
+             *   element. You only need to use the brackets [] and key value.
+             * - Keys : Gets an indexed collection containing only the keys contained in the dictionary.
+             * 
+             * Dictionary<K,V> methods include:
+             * - Add(K key, V value> : Adds the key, value pair to the dictionary
+             * - Remove(K key) : Removes the key/value pair related to the specified key from the dictionary
+             * 
+             * Some Dictionary<K,V> examples are below: 
+             */
+            Dictionary<string, int> d = new Dictionary<string, int>();
+            d.Add("Uno", 1);
+            d.Add("One", 1);
+            d.Add("Dos", 2);
+            d.Add("Deux", 2);
+            d.Remove("One");  //Remove key-value pair One, 1
+            d.Remove("Dos");  //Remove key-value pair Dos, 2
+
+            Console.WriteLine("Dictionary: ");
+            foreach (string ds in d.Keys)
+                Console.WriteLine(ds + ": " + d[ds]); //Uno: 1 Deux: 2
+            Console.WriteLine("\nCount: {0}", d.Count); // 2
+            /* In the above example, the dictionary d uses strings as it's keys and integers as the values.
+             * 
+             * Here are the additional Dictionary<K,V> properties and methods:
+             * - Values : Gets an indexed collection containing only the values in the dictionary
+             * - Clear() : Removes all the key/value pairs from the dictionary
+             * - ContainsKey(K key) - Returns true if the specified key is present in the dictionary
+             * - ContainsValue(V value) - Returns true if the specified value is present in the dictionary
+             * 
+             */
+
 
 
         }
